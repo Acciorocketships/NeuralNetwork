@@ -1,23 +1,28 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1504
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
-\margl1440\margr1440\vieww10800\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+Neural Network
 
-\f0\fs24 \cf0 Neural Network\
-\
-A Neural Network manually implemented in Matlab.\
-\
-\
-Files:\
-\
-nn.m: The neural network implementation. It stores the weights in global memory. To train from scratch, just type \'93clear global\'94. If you call nn.m with two arguments, it will train the neural network. The first argument is the inputs, and the second argument is the output. For example, when you call nn([0.5,0.2],1), 0.5 and 0.2 are the inputs, and 1 is the output. If you call nn.m with one argument, it evaluates the network with that input without training it. For example, you can call nn([0,0.1,0.5,0.2]), and the network will evaluate itself with inputs of 0, 0.1, 0.5 and 0.2.\
-\
-optimizenn.m: This fits the neural network to a set of data. optimizenn(inputs,outputs) will run until it has a sufficiently low cost from the cost function. Inputs and outputs are 2d matrices where each row is one input/output. The first input is the first row of inputs, the first output is the first row of outputs, etc.\
-\
-nntesting.m/nntesting2.m: These are tests of the neural network. The files contain a set of data that the network fits to. The programs provide visualization of the x,y coordinates of the inputs (color coded by their intended output). At each epoch, the network is evaluated at every x,y coordinate in a bounding rectangle, and the output is shown in a color coded image (orange for 1, purple for -1). nntesting2.m is like nntesting.m, but it also provides sin(x) and sin(y) as inputs, which improves the accuracy of the fit.\
-\
-\
-Research Paper:\
-[embed]http://www.dutchgfx.com/sphericalcow/wp-content/uploads/2016/12/Neural-Networks.pdf[/embed]}
+A Neural Network manually implemented in Matlab.
+
+
+Files:
+
+nn.m: The neural network implementation. It stores the weights in global memory. 
+To train from scratch, just type “clear global”. If you call nn.m with two arguments, it will train the neural network. 
+The first argument is the inputs, and the second argument is the output. 
+For example, when you call nn([0.5,0.2],1), 0.5 and 0.2 are the inputs, and 1 is the output. 
+If you call nn.m with one argument, it evaluates the network with that input without training it. 
+For example, you can call nn([0,0.1,0.5,0.2]), and the network will evaluate itself with inputs of 0, 0.1, 0.5 and 0.2.
+
+optimizenn.m: This fits the neural network to a set of data. 
+optimizenn(inputs,outputs) will run until it has a sufficiently low cost from the cost function. 
+Inputs and outputs are 2d matrices where each row is one input/output. 
+The first input is the first row of inputs, the first output is the first row of outputs, etc.
+
+nntesting.m/nntesting2.m: These are tests of the neural network. 
+The files contain a set of data that the network fits to. 
+The programs provide visualization of the x,y coordinates of the inputs (color coded by their intended output). 
+At each epoch, the network is evaluated at every x,y coordinate in a bounding rectangle, and the output is shown in a color coded image (orange for 1, purple for -1). 
+nntesting2.m is like nntesting.m, but it also provides sin(x) and sin(y) as inputs, which improves the accuracy of the fit.
+
+
+Research Paper:
+[embed]http://www.dutchgfx.com/sphericalcow/wp-content/uploads/2016/12/Neural-Networks.pdf[/embed]
